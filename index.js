@@ -137,12 +137,11 @@ function handleShutdownButton() {
       lastPressed = Date.now();
     }
     else {
-      if (Date.now() - lastPressed > 5000) {
+      if (Date.now() - lastPressed >= 5000) {
         logger.info("shutdown button pressed for at least 5 secs - initiating shutdown");
         exec('sudo shutdown now', function(error, stdout, stderr){ callback(stdout); });
       }
     }
-    logger.info(`button changed to ${value}`);
   })
 }
 
