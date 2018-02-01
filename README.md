@@ -1,5 +1,7 @@
 # gpio-input-handler
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mwittig/gpio-input-handler.svg)](https://greenkeeper.io/)
+
 This code has been written as part of an prototyping activity in about two days. It is a simple 
 application to report activities on observed GPIO input ports. In the given example, a 
 fictitious REST IOT service is invoked which consists of two consecutively called operations.
