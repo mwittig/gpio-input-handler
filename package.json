@@ -1,0 +1,32 @@
+{
+  "name": "gpio-input-handler",
+  "version": "0.0.1",
+  "author": {
+    "name": "Marcus Wittig",
+    "url": "https://github.com/mwittig/gpio-input-handler"
+  },
+  "license": "MIT",
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools",
+    "winston"
+  ],
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "https-proxy-agent": "^2.1.1",
+    "lodash.clone": "^4.5.0",
+    "logger-winston": "^0.0.10",
+    "nconf": "^0.10.0",
+    "node-cleanup": "^2.1.2",
+    "onoff": "^1.1.9",
+    "restler-promise": "^0.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mwittig/gpio-input-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mwittig/gpio-input-handler/issues"
+  }
+}
