@@ -31,10 +31,18 @@ module.exports = {
       }
     },
     {
-      gpio: 22,
+      gpio: 27,
       notifyState: 'HIGH',
       additionalData: {
         bid: 3,
+        waypointtype: "In Transit"
+      }
+    },
+    {
+      gpio: 22,
+      notifyState: 'HIGH',
+      additionalData: {
+        bid: 4,
         waypointtype: "End"
       }
     }
