@@ -18,7 +18,7 @@ module.exports = {
       gpio: 24,
       notifyState: 'HIGH',
       additionalData: {
-        bid: 1,
+        bid: '1',
         waypointtype: "Start"
       }
     },
@@ -26,7 +26,7 @@ module.exports = {
       gpio: 23,
       notifyState: 'HIGH',
       additionalData: {
-        bid: 2,
+        bid: '2',
         waypointtype: "In Transit"
       }
     },
@@ -34,7 +34,7 @@ module.exports = {
       gpio: 27,
       notifyState: 'HIGH',
       additionalData: {
-        bid: 3,
+        bid: '3',
         waypointtype: "In Transit"
       }
     },
@@ -42,7 +42,7 @@ module.exports = {
       gpio: 22,
       notifyState: 'HIGH',
       additionalData: {
-        bid: 4,
+        bid: '4',
         waypointtype: "End"
       }
     }
