@@ -86,6 +86,7 @@ function notifyIotService(data) {
   lastRequest = lastRequest.reflect().then(function () {
     logger.info("Invoking IOT Service");
     return new Promise(function (resolve) {
+      logger.info("GET", config.restBaseUrl + 'orders');
       rest.get(config.restBaseUrl + 'orders', {
         timeout: 5000,
         agent: agent,
@@ -100,6 +101,7 @@ function notifyIotService(data) {
           }
           var queryData = clone(data.additionalData);
           queryData.orderid = result.data;
+          logger.info("POST", config.restBaseUrl + 'tracks', data.additionalData);
           return rest.post(config.restBaseUrl + 'tracks', {
             timeout: 5000,
             agent: agent,
