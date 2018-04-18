@@ -101,7 +101,7 @@ function notifyIotService(data) {
           }
           var queryData = clone(data.additionalData);
           queryData.orderid = result.data;
-          logger.info("POST", config.restBaseUrl + 'tracks', data.additionalData);
+          logger.info("POST", config.restBaseUrl + 'tracks', queryData);
           return rest.post(config.restBaseUrl + 'tracks', {
             timeout: 5000,
             agent: agent,
@@ -222,8 +222,21 @@ function cleanup() {
 // main
 //
 
-logger.info("Started");
-readyLed.writeSync(1);
-handleInputs();
-handleShutdownButton();
-nodeCleanup(cleanup);
+var testMode = false
+process.argv.forEach(function (val, index) {
+  if (val === "--test") {
+    testMode = true;
+  }
+});
+
+if (testMode) {
+  logger.info("Test Mode");
+  notifyIotService(config.inputs[0])
+}
+else {
+  logger.info("Started");
+  readyLed.writeSync(1);
+  handleInputs();
+  handleShutdownButton();
+  nodeCleanup(cleanup);
+}
