@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 NAME=gpio-input-handler
-cp init-script.sh /etc/init.d/${NAME}
+cp init-d-script.sh /etc/init.d/${NAME}
 chmod +x /etc/init.d/${NAME}
 chown root:root /etc/init.d/${NAME}
 update-rc.d ${NAME} defaults
