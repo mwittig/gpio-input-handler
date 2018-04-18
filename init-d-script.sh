@@ -2,7 +2,7 @@
 # this is a slightly modified version of node-startup written
 # by Anthony Ettinger, https://github.com/chovy
 
-APP_NAME="giop-input-handler"
+APP_NAME="gpio-input-handler"
 USER="pi"
 GROUP="$USER"
 NODE_ENV="production"
